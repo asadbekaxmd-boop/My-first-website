@@ -1,0 +1,74 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in — Apple Selection</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./logincss.css">
+</head>
+<body>
+
+  <div class="stage">
+    <canvas id="net"></canvas>
+    <svg class="orbit-mark" viewBox="0 0 200 200">
+      <g fill="none" stroke-width="1">
+        <circle cx="100" cy="100" r="92" stroke="rgba(111,198,255,0.25)"/>
+        <circle cx="100" cy="100" r="70" stroke="rgba(155,123,255,0.22)"/>
+        <circle cx="100" cy="100" r="46" stroke="rgba(217,184,119,0.2)"/>
+      </g>
+      <g>
+        <circle cx="100" cy="8" r="4" fill="#6fc6ff">
+          <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="9s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="100" cy="30" r="3" fill="#9b7bff">
+          <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="-360 100 100" dur="13s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="100" cy="54" r="2.4" fill="#d9b877">
+          <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="7s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </svg>
+    <div class="stage-content">
+      <div class="eyebrow">Secure Access</div>
+      <h1>Your world of <em>Apple</em>, curated.</h1>
+      <p>Sign in to track orders, save favourites, and get early access to the latest arrivals at Apple Selection.</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="card" id="tiltCard">
+      <div class="brand">
+        <span class="brand-mark">A</span>
+        <span class="brand-text">Apple Selection</span>
+      </div>
+
+      <h2>Sign in</h2>
+      <p class="sub">Enter your details to continue.</p>
+
+      <form id="loginForm">
+        <div class="field">
+          <label for="email">Email</label>
+          <div class="input-wrap"><input type="email" id="email" required placeholder="you@example.com"></div>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="input-wrap"><input type="password" id="password" required placeholder="••••••••"></div>
+        </div>
+        <div class="row-between"><a href="#">Forgot password?</a></div>
+
+        <button type="submit" id="submitBtn">
+          <span class="btn-label"><a href="./index.html" class="a-singn">Sign in</a></span>
+          <span class="spinner"></span>
+        </button>
+        <p class="error" id="error">Email yoki parol noto'g'ri.</p>
+      </form>
+
+      <div class="divider">or</div>
+      <a href="../index.html" class="back">← Back to store</a>
+    </div>
+  </div>
+
+  <script src="./loginjs.js"></script>
+</body>
+</html>
